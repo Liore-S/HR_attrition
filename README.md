@@ -50,7 +50,7 @@ Email: root@mail.com
 Password: root123
 ```
 ### Dashboard Preview
-![Dasbor Screenshot](/app/notebook/template-data-science/liore-s-dashboard.png)
+![Dasbor Screenshot](https://i.ibb.co.com/0KX1crx/liore-s-dashboard.png)
 
 ### Penjelasan
 Pada bagian atas dashboard terdapat beberapa filter seperti *Department*, *Gender*, *OverTime*, dan *JuniorRole*. Filter ini dapat digunakan untuk melihat *attrition rate* karyawan berdasarkan kriteria tertentu. Misalnya, Anda dapat memilih untuk melihat data attrition hanya untuk karyawan di departemen tertentu atau hanya untuk karyawan yang bekerja lembur. Dengan menggunakan filter ini, pengguna dapat memperoleh wawasan yang lebih spesifik dan mendetail mengenai faktor-faktor yang mempengaruhi keluarnya karyawan dari perusahaan.
