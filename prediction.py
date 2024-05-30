@@ -109,7 +109,7 @@ predicted_data = predict_attrition(data, model, features, scaler)
 print('Saving predicted data...')
 
 # Save the predicted data
-file_name = 'model/employee_data_predicted.csv'
+file_name = 'csv/employee_data_predicted.csv'
 predicted_data.to_csv(file_name, index=False)
 print('Predicted data saved')
 print('File name:', file_name)
