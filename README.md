@@ -8,7 +8,7 @@ Ia memiliki lebih dari 1000 karyawan yang tersebar di seluruh penjuru negeri.
 
 ### Permasalahan Bisnis
 
-Jaya Jaya Maju memiliki permasalahan terkait dengan kenaikan *attrition rate* karyawan yang cukup tinggi yaitu lebih dari 10%.
+Jaya Jaya Maju memiliki permasalahan terkait dengan kenaikan *attrition rate* karyawan yang cukup tinggi. Hal ini menyebabkan perusahaan mengalami kerugian yang signifikan, baik dari segi finansial maupun operasional. Oleh karena itu, perusahaan membutuhkan solusi untuk mengatasi permasalahan ini dan mempertahankan karyawan yang ada.
 
 ### Cakupan Proyek
 
@@ -39,8 +39,17 @@ docker run -d --name rapids-vs --gpus '"device=1"' -v ~/data-science:/app nvcr.i
 Python Library:
 ```bash
 # Jalankan perintah tersebut pada container rapids-vs
-pip install plotly==5.22.0 scipy==1.13.1 imbalanced-learn==0.12.2
+pip install -r requirements.txt
 ```
+
+## Model Usage
+
+Untuk menggunakan model prediksi *attrition* karyawan, Anda dapat menjalankan kode berikut:
+
+```py
+python predict.py
+```
+> Pastikan Anda telah mengubah parameter `input_data` dan `file_name` pada kode tersebut sesuai dengan nama/path data yang ingin anda prediksi.
 
 ## Business Dashboard
 
@@ -64,14 +73,24 @@ Plot ini penting untuk memahami bagaimana peningkatan karir dan kompensasi dapat
 ## Conclusion
 
 Berdasarak analisis yang dilakukan terdapat beberapa faktor yang menyebabkan kenaikan *attrition rate* karyawan pada Jaya Jaya Maju. Beberapa faktor tersebut antara lain:
-- Over Time, dimana karyawan yang bekerja lembur cenderung memiliki *attrition rate* yang lebih tinggi.
-- JuniorRole dan First Job, dimana karyawan yang memiliki posisi junior dan first job cenderung memiliki *attrition rate* yang lebih tinggi
-- Karyawan dengan gaji di atas rata-rata memiliki tingkat *attrition rate* yang lebih rendah. 
+- **Over Time**  
+  - Karyawan yang sering bekerja lembur cenderung memiliki attrition rate yang lebih tinggi. Ini bisa disebabkan oleh beberapa alasan, termasuk kelelahan, kurangnya keseimbangan antara kehidupan kerja dan pribadi, serta tekanan pekerjaan yang tinggi. Karyawan yang bekerja lembur mungkin merasa terbebani dan kurang memiliki waktu untuk beristirahat atau berinteraksi dengan keluarga dan teman-teman, yang akhirnya dapat menyebabkan mereka meninggalkan perusahaan. 
+- **JuniorRole** dan **First Job**  
+  - Ekspektasi Karir: Karyawan di posisi junior mungkin memiliki ekspektasi yang tinggi terhadap perkembangan karir mereka dan mungkin merasa frustrasi jika mereka tidak melihat adanya peluang promosi atau perkembangan karir yang cepat.
+  - Adaptasi Lingkungan Kerja: Karyawan yang baru pertama kali bekerja mungkin memerlukan waktu lebih lama untuk menyesuaikan diri dengan budaya dan lingkungan kerja, yang bisa menjadi faktor penyebab ketidakpuasan dan akhirnya attrition.
+- **MonthlySalary**
+  -  Kepuasan Finansial: Gaji yang lebih tinggi dapat memberikan kepuasan finansial yang lebih besar, yang bisa mengurangi keinginan karyawan untuk mencari pekerjaan lain dengan imbalan yang lebih baik.
 
 ### Rekomendasi Action Items (Optional)
 
 Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
 
-- **Kurangi Overtime**: Perbaiki manajemen waktu dan distribusi tugas untuk mengurangi kebutuhan akan lembur.
-- **Karyawan Junior**: Buat rencana karir yang jelas dan transparan untuk karyawan junior. Tunjukkan jalur promosi dan peluang pengembangan karir dalam perusahaan untuk meningkatkan motivasi dan komitmen mereka.
-- **Tinjau dan Sesuaikan Gaji**: Pastikan struktur gaji kompetitif untuk mempertahankan karyawan, terutama bagi mereka yang berada di posisi kritis.
+- **Kurangi Overtime**
+  - Kebijakan Overtime: Implementasikan kebijakan yang membatasi jumlah lembur yang diperbolehkan. Misalnya, batasi lembur maksimal 10 jam per minggu per karyawan.
+  - Manajemen Waktu: Tingkatkan manajemen waktu dan distribusi tugas sehingga pekerjaan dapat diselesaikan dalam jam kerja normal. Pertimbangkan untuk menambah jumlah karyawan atau menggunakan sistem shift jika beban kerja tinggi.
+- **Karyawan Junior**
+  - Rencana Karir: Buat rencana karir yang jelas dan transparan untuk karyawan junior. Tampilkan jalur promosi dan peluang pengembangan karir dalam perusahaan untuk meningkatkan motivasi dan komitmen mereka.
+  - Evaluasi Berkala: Lakukan evaluasi kinerja secara berkala dan berikan umpan balik konstruktif. Diskusikan tujuan karir karyawan dan langkah-langkah yang diperlukan untuk mencapainya.
+- **Tinjau dan Sesuaikan Gaji**
+  - Struktur Gaji Kompetitif: Pastikan struktur gaji yang kompetitif dengan melakukan benchmarking terhadap industri sejenis. Periksa apakah gaji yang ditawarkan sudah sesuai dengan standar pasar.
+  - Insentif dan Bonus: Tawarkan insentif dan bonus berbasis kinerja untuk mendorong produktivitas dan loyalitas karyawan.
